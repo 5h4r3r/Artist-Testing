@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\SMTP;
 
 class Mail
 {
-    public static function SendMail($name,$email,$text,$file = 'Пусто')
+    public static function SendMail($name,$email,$text)
     {
         // Переменные, которые отправляет пользователь
         //$name = $_POST['name'];
@@ -46,25 +46,16 @@ class Mail
             $mail->addAddress('ryazanovhomebackup@gmail.com');  
         
             // Прикрипление файлов к письму
-        if (!empty($file['name'][0])) {
-            for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-                $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-                $filename = $file['name'][$ct];
-                if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-                    $mail->addAttachment($uploadfile, $filename);
-                    $rfile[] = "Файл $filename прикреплён";
-                } else {
-                    $rfile[] = "Не удалось прикрепить файл $filename";
-                }
-            }   
-        }
         // Отправка сообщения
         $mail->isHTML(true);
         $mail->Subject = $title;
         $mail->Body = $body;    
         
         // Проверяем отравленность сообщения
-        if ($mail->send()) {$result = "success";} 
+        if ($mail->send()) {
+            $result = "success";
+            $status = "ok";
+        } 
         else {$result = "error";}
         
         } catch (Exception $e) {
@@ -73,6 +64,7 @@ class Mail
         }
         
         // Отображение результата
-        echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+        //echo json_encode(["result" => $result, "status" => $status]);
+        return ["result" => $result, "status" => $status];
     }
 }

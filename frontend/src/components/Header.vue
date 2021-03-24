@@ -32,6 +32,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 #header {
+    grid-column-start: 2;
+    grid-column-end: 2;
   .segment {
     background: linear-gradient(to top, #e7b219, #f9dd0a);
   }

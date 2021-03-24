@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss">
 #app {
+  
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,14 +49,29 @@ export default {
     width: 100%;
     background: cover;
     background-position: center;
+    
   }
   .content {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 900px;
+
+    max-width: 900px;
+    min-width: 480px;
   }
 }
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+#app{
+  .segment{
+
+  }
+}
+}
+@media all and (min-width: 480px) and (max-width: 768px) { }
+
+@media all and (max-width: 480px) { }
 body {
   margin: 0;
   padding: 0;

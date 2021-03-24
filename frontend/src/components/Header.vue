@@ -8,12 +8,11 @@
         </div>
         <div class="nav">
           <ul>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Почему мы</a></li>
-            <li><a href="">Портфолио</a></li>
-            <li><a href="">Награды</a></li>
-            <li><a href="">Партнеры</a></li>
-            <li><a href="">Контакты</a></li>
+            <li><a href="#" v-scroll-to="'#whyarewe'">О нас</a></li>
+            <li><a href="#" v-scroll-to="'#awards'">Почему мы</a></li>
+            <li><a href="#" v-scroll-to="'#examples'">Портфолио</a></li>
+            <li><a href="#" v-scroll-to="'#partners'">Партнеры</a></li>
+            <li><a href="#" v-scroll-to="'#contacrs'">Контакты</a></li>
           </ul>
         </div>
       </div>

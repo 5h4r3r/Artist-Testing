@@ -1,23 +1,32 @@
 <template>
   <div id="app">
         <Header/>
+        <Video/>
+        <form-top/>
     <test/>
   </div>
 </template>
 
 <script>
-import Header from './components/var2/Header.vue';
+import FormTop from './components/FormTop.vue';
+import Header from './components/Header.vue';
+import Video from './components/Video.vue';
 export default {
   name: "App",
   components: {
     Header,
+    Video,
+    FormTop,
   },
 };
 </script>
 
 <style lang="scss">
 #app {
-
+ .marker {
+    border: 2px solid red;
+    //background: red;
+  }
 }
 @media all and (min-width: 1024px) and (max-width: 1280px) {
 }

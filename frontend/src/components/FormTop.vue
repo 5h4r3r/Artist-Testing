@@ -1,18 +1,7 @@
 <template>
-  <div id="video">
+  <div id="formtop">
     <div class="background" />
-    <div class="info">
-      <h2>СТУДИЯ ПРОИЗВОДСТВА РЕКЛАМЫ "АРТИСТ"</h2>
-      <p>
-        Изготовит для Вас видеоролики любой сложности: от простых слайдов, до
-        съемок игровых роликов и презентационных фильмов со сложной 3D
-        анимацией. Голосами для Вашей будущей рекламы станут профессиональные
-        дикторы и актеры, которых Вы сможете самостоятельно выбрать из большой
-        базы голосов. Помимо видео- и аудио-роликов, мы также можем предложить
-        изготовление флеш-баннеров и большого спектра графической продукции: от
-        всевозможных макетов и иллюстраций, до тщательно продуманных логотипов и
-        фирменных стилей.
-      </p>
+    <div class="form">
     </div>
   </div>
 </template>
@@ -28,13 +17,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-#video {
+#formtop {
   display: grid;
   grid-template-columns: minmax(1em, auto) repeat(30, minmax(auto, 32px)) minmax(
       1em,
       auto
     );
   grid-template-rows: repeat(25, minmax(auto, 32px));
+  display: none;
   .background {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -74,13 +64,14 @@ export default {
     }
   }
    @media all and (min-width: 768px) and (max-width: 1024px) {
+       display: grid;
      .background {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     width: 100%;
     background-position: top;
     background-size: cover;
-    background-image: url("../assets/videom1.jpg");
+    background-image: url("../assets/videom2.jpg");
   }
 }
 }

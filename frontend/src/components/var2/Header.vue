@@ -1,7 +1,8 @@
 <template>
   <div id="header">
     <div class="segment">
-      <div class="content header">
+      </div>
+      <div class="header">
         <div class="logo" />
         <div class="plank">
           <div class="num">8-800-555-35-35</div>
@@ -14,7 +15,6 @@
             <li><a href="#" v-scroll-to="'#partners'">Партнеры</a></li>
             <li><a href="#" v-scroll-to="'#contacrs'">Контакты</a></li>
           </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -32,12 +32,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 #header {
-    grid-column-start: 2;
-    grid-column-end: 2;
+  display: grid;
+  grid-template-columns: auto 900px auto;
   .segment {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 90px;
     background: linear-gradient(to top, #e7b219, #f9dd0a);
   }
   .header {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    display: grid;
     position: relative;
     height: 90px;
     a {
@@ -57,7 +63,7 @@ export default {
       margin-top: 0px;
       height: 41px;
       width: 185px;
-      background-image: url("../assets/Rounded_Rectangle_2.png");
+      background-image: url("../../assets/Rounded_Rectangle_2.png");
       background-size: cover;
       right: 0;
       .num {

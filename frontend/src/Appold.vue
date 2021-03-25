@@ -1,29 +1,76 @@
 <template>
   <div id="app">
-        <Header/>
+    <Header />
     <test/>
+    
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/var2/Header.vue';
+//import Awards from "./components/Awards.vue";
+//import Examples from "./components/Examples.vue";
+import Footer from "./components/Footer.vue";
+//import FormSegment from "./components/FormSegment.vue";
+import Header from "./components/Header.vue";
+import Test from './components/Test.vue';
+//import Map from "./components/Map.vue";
+//import Partners from "./components/Partners.vue";
+//import Somenumbers from "./components/Somenumbers.vue";
+//import Video from "./components/Video.vue";
+//import Whyarewe from "./components/Whyarewe.vue";
+
 export default {
   name: "App",
   components: {
     Header,
+    //Video,
+    //Whyarewe,
+    //Somenumbers,
+    //Examples,
+    //Awards,
+    //Partners,
+    //FormSegment,
+    //Map,
+    Footer,
+    Test,
   },
 };
 </script>
 
 <style lang="scss">
 #app {
+  //font-family: Avenir, Helvetica, Arial, sans-serif;
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+  //text-align: center;
+  //display: grid;
+  //grid-template-columns: auto 900px auto;
+  .segment {
+    //grid-column-start: 1;
+    //grid-column-end: 3;
+    //position: relative;
+    width: 100%;
+    background: cover;
+    background-position: center;
+  }
+  .content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
+    max-width: 900px;
+    min-width: 480px;
+  }
 }
 @media all and (min-width: 1024px) and (max-width: 1280px) {
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  
+  #app {
+    .segment {
+    }
+  }
 }
 @media all and (min-width: 480px) and (max-width: 768px) {
 }

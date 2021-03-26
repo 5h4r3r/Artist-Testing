@@ -3,7 +3,7 @@
         <Header/>
         <Video/>
         <form-top/>
-    <test/>
+        <formsegment />
   </div>
 </template>
 
@@ -11,12 +11,14 @@
 import FormTop from './components/FormTop.vue';
 import Header from './components/Header.vue';
 import Video from './components/Video.vue';
+import formsegment from './components/FormSegment.vue';
 export default {
   name: "App",
   components: {
     Header,
     Video,
     FormTop,
+    formsegment,
   },
 };
 </script>

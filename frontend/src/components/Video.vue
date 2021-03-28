@@ -1,7 +1,21 @@
 <template>
-  <div id="video">
+  <div id="first">
     <div class="background" />
-    <div class="info">
+    <div id="video">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube-nocookie.com/embed/dCSr5fcjOeI?controls=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="form">
+      <frontform />
+    </div>
+    <div id="info">
       <h2>СТУДИЯ ПРОИЗВОДСТВА РЕКЛАМЫ "АРТИСТ"</h2>
       <p>
         Изготовит для Вас видеоролики любой сложности: от простых слайдов, до
@@ -18,8 +32,10 @@
 </template>
 
 <script>
+import frontform from "./singlecomponents/frontform.vue";
 export default {
-  name: "HelloWorld",
+  components: { frontform },
+  name: "Video",
   props: {
     msg: String,
   },
@@ -28,60 +44,98 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-#video {
+#first {
+  height: 810px;
+  grid-column: 1 / 4;
   display: grid;
-  grid-template-columns: minmax(1em, auto) repeat(30, minmax(auto, 32px)) minmax(
-      1em,
-      auto
-    );
-  grid-template-rows: repeat(25, minmax(auto, 32px));
+  //display: grid;
+  grid-template-columns: auto repeat(3, minmax(auto, 300px)) auto;
+  grid-template-rows: 480px 330px;
+  //height: 900px;
   .background {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("../assets/video.png");
+    background-position: top;
+    background-image: url("../assets/video.webp");
   }
-  .video {
+  #video {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    padding-top: 9.8%;
+    padding-left: 4.5%;
+    padding-right: 6%;
+    padding-bottom: 19.9%;
+    iframe {
+      //width: 60%;
+      //height: 60%;
+      border-width: 0;
+      outline-width: 0;
+    }
+  }
+  #form {
     position: relative;
-    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
-    height: 0;
-    overflow: hidden;
+    padding-top: 10%;
+    padding-left: 7%;
+    grid-column: 4/5;
+    grid-row: 1/2;
   }
-  .video iframe {
-    position: absolute;
-    top: 11.5%;
-    left: 3.1%;
-    width: 60%;
-    height: 60%;
-    border-width: 0;
-    outline-width: 0;
-  }
-  .info {
-    grid-column: 2/32;
-    grid-row: 19/26;
+  #info {
+    grid-column: 2/5;
+    grid-row: 2/3;
     position: relative;
-    top: 12%;
+    padding: 3%;
+    padding-top: 13%;
     H2 {
       position: relative;
       text-align: center;
-      font-size: 32px;
+      font-size: 40px;
     }
     p {
       text-align: justify;
-      font-size: 14pt;
+      font-size: 17px;
     }
   }
-   @media all and (min-width: 768px) and (max-width: 1024px) {
-     .background {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    width: 100%;
-    background-position: top;
-    background-size: cover;
-    background-image: url("../assets/videom1.jpg");
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    border: 2px solid blue;
+    #form {
+      background-color: red;
+      position: relative;
+      top: 0;
+      left: 0;
+      grid-column: 1/ 2;
+      grid-row: 2/3;
+    }
   }
 }
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #video {
+    grid-column: 1/-1;
+    //grid-row: 2 / 3;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto-fill, minmax(480px, 1024px));
+    .background {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      width: 100%;
+      background-position: top;
+      background-size: cover;
+      background-image: url("../assets/videom1.jpg");
+    }
+    .info {
+      //grid-column: 1/-1;
+      //grid-row: 3/3;
+      position: relative;
+      top: 12%;
+      H2 {
+        position: relative;
+        text-align: center;
+        font-size: 32px;
+      }
+      p {
+        text-align: justify;
+        font-size: 14pt;
+      }
+    }
+  }
 }
 </style>

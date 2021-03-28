@@ -7,9 +7,9 @@ use Src\Http;
 $_POST = json_decode(file_get_contents("php://input"), true);
 $headers = [
     'Access-Control-Allow-Origin: *',
-    'Content-type: application/json',
+    'Content-type: application/json; charset=UTF-8',
     'Access-Control-Allow-Headers: Content-Type',
-    'Access-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS',
+    'Access-Control-Allow-Methods: GET,POST',
 ];
 $error = ['error' => 'Валидацния не пройдена'];
 $error2 = ['error' => 'Нет данных'];
@@ -20,8 +20,8 @@ $error2 = ['error' => 'Нет данных'];
 if (isset($_POST['name']) and isset($_POST['tel'])){ 
     if(!empty($_POST['name']) and !empty($_POST['tel'])){
         // Отправка почты
-        //$data =  Mail::SendMail($_POST['name'], "fanman45@gmail.com", $_POST['number']);
-        $data = ['Данные получены' => $_POST['name'] . " " . $_POST['tel']];
+        $data =  Mail::SendMail($_POST['name'], $_POST['tel']);
+        //$data = ['Данные получены' => $_POST['name'] . " " . $_POST['tel']];
         Http::response(201, $data, $headers);
     } else {
         Http::response(400, $error, $headers);

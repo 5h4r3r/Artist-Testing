@@ -56,7 +56,7 @@ export default {
     margin: 10px;
     height: 70px;
     width: 77px;
-    background-image: url("../assets/logo.png");
+    background-image: url("../assets/header/header_logo.webp");
     //grid
     grid-column: 1/2;
     grid-row: 1/3;
@@ -64,7 +64,7 @@ export default {
   .plank {
     height: 41px;
     width: 185px;
-    background-image: url("../assets/Rounded_Rectangle_2.png");
+    background-image: url("../assets/header/header_item1.webp");
     background-size: cover;
     //grid
     grid-column: 9/11;

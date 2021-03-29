@@ -3,64 +3,64 @@
     <div class="block6-content">
       <div class="block6-title"><h2>С НАМИ РАБОТАЮТ</h2></div>
       <div class="block6-item1">
-        <img src="../assets/block6/block6_item1.png" />
+        <img src="../assets/block6/block6_item1.webp" />
       </div>
       <div class="block6-item2">
-        <img src="../assets/block6/block6_item2.png" />
+        <img src="../assets/block6/block6_item2.webp" />
       </div>
       <div class="block6-item3">
-        <img src="../assets/block6/block6_item3.png" />
+        <img src="../assets/block6/block6_item3.webp" />
       </div>
       <div class="block6-item4">
-        <img src="../assets/block6/block6_item4.png" />
+        <img src="../assets/block6/block6_item4.webp" />
       </div>
       <div class="block6-item5">
-        <img src="../assets/block6/block6_item5.png" />
+        <img src="../assets/block6/block6_item5.webp" />
       </div>
       <div class="block6-item6">
-        <img src="../assets/block6/block6_item6.png" />
+        <img src="../assets/block6/block6_item6.webp" />
       </div>
       <div class="block6-item7">
-        <img src="../assets/block6/block6_item7.png" />
+        <img src="../assets/block6/block6_item7.webp" />
       </div>
       <div class="block6-item8">
-        <img src="../assets/block6/block6_item8.png" />
+        <img src="../assets/block6/block6_item8.webp" />
       </div>
       <div class="block6-item9">
-        <img src="../assets/block6/block6_item9.png" />
+        <img src="../assets/block6/block6_item9.webp" />
       </div>
       <div class="block6-item10">
-        <img src="../assets/block6/block6_item10.png" />
+        <img src="../assets/block6/block6_item10.webp" />
       </div>
       <div class="block6-item11">
-        <img src="../assets/block6/block6_item11.png" />
+        <img src="../assets/block6/block6_item11.webp" />
       </div>
       <div class="block6-item12">
-        <img src="../assets/block6/block6_item12.png" />
+        <img src="../assets/block6/block6_item12.webp" />
       </div>
       <div class="block6-item13">
-        <img src="../assets/block6/block6_item13.png" />
+        <img src="../assets/block6/block6_item13.webp" />
       </div>
       <div class="block6-item14">
-        <img src="../assets/block6/block6_item14.png" />
+        <img src="../assets/block6/block6_item14.webp" />
       </div>
       <div class="block6-item15">
-        <img src="../assets/block6/block6_item15.png" />
+        <img src="../assets/block6/block6_item15.webp" />
       </div>
       <div class="block6-item16">
-        <img src="../assets/block6/block6_item16.png" />
+        <img src="../assets/block6/block6_item16.webp" />
       </div>
       <div class="block6-item17">
-        <img src="../assets/block6/block6_item17.png" />
+        <img src="../assets/block6/block6_item17.webp" />
       </div>
       <div class="block6-item18">
-        <img src="../assets/block6/block6_item18.png" />
+        <img src="../assets/block6/block6_item18.webp" />
       </div>
       <div class="block6-item19">
-        <img src="../assets/block6/block6_item19.png" />
+        <img src="../assets/block6/block6_item19.webp" />
       </div>
       <div class="block6-item20">
-        <img src="../assets/block6/block6_item20.png" />
+        <img src="../assets/block6/block6_item20.webp" />
       </div>
     </div>
   </div>
@@ -245,7 +245,7 @@ export default {
   .block6-content {
     grid-column: 1 / 4;
     display: grid;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(auto-fill, auto);
     grid-gap: 2%;
     column-gap: 5%;
@@ -260,7 +260,7 @@ export default {
   
   } 
 }
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (max-width: 768px) {
   #block6 {
     height: 2800px;
     background-color: white;

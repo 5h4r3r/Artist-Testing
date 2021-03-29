@@ -3,22 +3,25 @@
     <div class="block2-content">
       <div class="block2-title"><h2>ПОЧЕМУ ВЫБИРАЮТ НАС</h2></div>
       <div class="block2-item">
-        <img src="../assets/block2/block2_item1.png" />
+        <img src="../assets/block2/block2_item1.webp" />
         <p>Богатый опыт</p>
       </div>
       <div class="block2-item">
-        <img src="../assets/block2/block2_item2.png" />
+        <img src="../assets/block2/block2_item2.webp" />
         <p>
           Лидеры на рынке <br />
           рекламных услуг
         </p>
       </div>
       <div class="block2-item">
-        <img src="../assets/block2/block2_item3.png" />
-        <p>Качество, подтвержденное <br /> неоднократно</p>
+        <img src="../assets/block2/block2_item3.webp" />
+        <p>
+          Качество, подтвержденное <br />
+          неоднократно
+        </p>
       </div>
       <div class="block2-item">
-        <img src="../assets/block2/block2_item4.png" />
+        <img src="../assets/block2/block2_item4.webp" />
         <p>
           Конкурентоспособная <br />
           цена
@@ -45,9 +48,9 @@ export default {
 .block2-content {
   grid-column: 2 / 3;
   display: grid;
-  grid-template-columns: repeat(4,minmax(auto, 225px));
+  grid-template-columns: repeat(4, minmax(auto, 225px));
   grid-template-rows: repeat(auto-fit, auto);
-   column-gap: 2em;
+  column-gap: 2em;
   .block2-title {
     grid-column: 1 / -1;
     justify-self: center;
@@ -62,6 +65,26 @@ export default {
     p {
       font-size: 14pt;
     }
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #block2 {
+    height: 100%;
+    grid-template-columns: auto minmax(500px, 1fr) auto;
+  }
+  .block2-content {
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(auto-fit, auto);
+  }
+}
+@media all and (max-width: 768px) {
+  #block2 {
+    height: 100%;
+    grid-template-columns: auto minmax(500px, 1fr) auto;
+  }
+  .block2-content {
+    grid-template-columns: repeat(1, minmax(480px, 2fr));
+    grid-template-rows: repeat(auto-fit, auto);
   }
 }
 </style>

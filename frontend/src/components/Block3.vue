@@ -3,18 +3,18 @@
   <div id="block3">
     <div class="block3-content">
       <div class="block3-title">
-        <img src="../assets/block3/block3_title.png" alt="НЕМНОГО ЦИФР" />
+        <img src="../assets/block3/block3_title.webp" alt="НЕМНОГО ЦИФР" />
       </div>
       <div class="block3-item1">
-        <img src="../assets/block3/block3_item1.png" alt="20 лет" />
+        <img src="../assets/block3/block3_item1.webp" alt="20 лет" />
         <p>на рынке СМИ</p>
       </div>
       <div class="block3-item2">
-        <img src="../assets/block3/block3_item2.png" alt="более 1000" />
+        <img src="../assets/block3/block3_item2.webp" alt="более 1000" />
         <p>клиентов</p>
       </div>
       <div class="block3-item3">
-        <img src="../assets/block3/block3_item3.png" alt="13 наград" />
+        <img src="../assets/block3/block3_item3.webp" alt="13 наград" />
         <p>
           и премий на крнкурсах <br />
           рекламы
@@ -56,7 +56,7 @@ export default {
   %item-parm {
     justify-self: center;
     text-align: center;
-    grid-row: 2 / 3;
+    //grid-row: 2 / 3;
     p {
       color: white;
       font-size: 14pt;
@@ -72,6 +72,28 @@ export default {
   .block3-item3 {
     justify-self: left;
     @extend %item-parm;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  #block3 {
+    height: 100%;
+    background-size: cover;
+    grid-template-columns: auto minmax(500px, 1fr) auto;
+  }
+  .block3-content {
+    grid-template-columns: repeat(1, minmax(480px, 2fr));
+    grid-template-rows: repeat(auto-fit, auto);
+      .block3-title {
+        margin-top: 5%;
+    margin-bottom: 2%;
+  }
+    .block3-item1 {
+    justify-self: center;
+  }
+  .block3-item3 {
+    justify-self: center;
+  }
   }
 }
 </style>

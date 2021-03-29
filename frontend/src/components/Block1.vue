@@ -45,7 +45,7 @@ export default {
 #block1 {
   height: 810px;
   background-image: url("../assets/block1/block1_background1.webp");
-  background-position: top;
+  background-position: center;
   display: grid;
   grid-template-columns: auto minmax(auto, 900px) auto;
 }
@@ -57,17 +57,32 @@ export default {
   #video {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    padding-top: 9.8%;
-    padding-left: 4.5%;
-    padding-right: 6%;
-    padding-bottom: 14.9%;
+    //padding-top: 9.8%;
+    //padding-left: 4.5%;
+    //padding-right: 6%;
+    //padding-bottom: 14.9%;
+    position: relative;
+    //padding-bottom: 56.25%;
+    padding-bottom: 45.35%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-left: 4.5%;
+    margin-right: 6%;
+    margin-top: 9.8%;
+    margin-bottom: 20%;
     iframe {
-         max-width: 100%;
-         max-height: 100%;
+      //max-width: 100%;
+      //max-height: 100%;
       //width: 60%;
       //height: 60%;
-      border-width: 0;
-      outline-width: 0;
+      //border-width: 0;
+      //outline-width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
   #form {
@@ -93,10 +108,7 @@ export default {
     }
   }
 }
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  //border: 2px solid blue;
-}
-@media all and (min-width: 480px) and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
   #block1 {
     height: auto;
     background: #ebebeb;
@@ -105,44 +117,62 @@ export default {
     //background-repeat: no-repeat;
     //background-size: contain;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto minmax(500px, 1fr) auto;
+    background: #ebebeb;
+    background-image: url("../assets/block1/block1_background2.webp");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .block1-content {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: minmax(300px, auto);
-    grid-template-rows: 1.2fr 1fr 1fr;
+    grid-template-rows: 1fr 0.7fr 1fr;
     #video {
-         background: #ebebeb;
-    background-image: url("../assets/block1/block1_background2.webp");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      padding-top: 9%;
-      padding-left: 8.5%;
-      padding-right:8.5%;
-      padding-bottom: 7.5%;
+      //padding-top: 9%;
+      //padding-left: 8.5%;
+      //padding-right:8.5%;
+      //padding-bottom: 7.5%;
+      position: relative;
+      //padding-bottom: 56.25%;
+       padding-bottom: 45.5%;
+      padding-top: 30px;
+      height: 0;
+      overflow: hidden;
+      margin-top: 8%;
+      margin-bottom: 20%;
+      margin-left: 8%;
+      margin-right: 8%;
       iframe {
-        max-width: 100%;
-         height: 75%;
-        border-width: 0;
-        outline-width: 0;
+        //max-width: 100%;
+        //height: 75%;
+        //border-width: 0;
+        //outline-width: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
     #form {
-      grid-column: 1/2;
+      grid-column: 1/-1;
       grid-row: 3/4;
       position: relative;
-      padding-top: 10%;
-      padding-left: 7%;
+      padding-top: 0;
+      padding-left: 0;
+      justify-self: center;
+      align-self: center;
     }
     #info {
       grid-column: 1/-1;
       grid-row: 2/3;
       justify-self: center;
-      align-self: top;
+      align-self: end;
+      padding: 10%;
       H2 {
         text-align: center;
         margin-top: 1%;
@@ -150,7 +180,6 @@ export default {
       }
       p {
         text-align: justify;
-        font-size: 17px;
       }
     }
   }

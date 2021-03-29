@@ -1,25 +1,23 @@
 <template>
   <div id="form2">
-    <form  id="forma2" @submit.prevent="valid"></form>
-    <label  class="box1"
-      >Оставьте свои данные и мы перезвоним вам</label
-    >
+    <form id="forma2" @submit.prevent="valid"></form>
+    <label class="box1">Оставьте свои данные и мы перезвоним вам</label>
     <input
-    form="forma2"
+      form="forma2"
       class="form-input2 box2"
       :class="{ invalid: $v.posts.name.$error }"
       v-model="$v.posts.name.$model"
       placeholder="Имя"
     />
     <input
-  form="forma2"
+      form="forma2"
       class="form-input2 box3"
       :class="{ invalid: $v.posts.tel.$error }"
       v-model="$v.posts.tel.$model"
       placeholder="8 (913)"
     />
     <input
-    form="forma2"
+      form="forma2"
       class="button2 box4"
       type="submit"
       value="СВЯЖИТЕСЬ СО МНОЙ"
@@ -97,7 +95,7 @@ export default {
   border-radius: 17px;
   .box1 {
     display: block;
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     grid-row: 1 / 2;
     color: white;
     text-align: center;
@@ -165,12 +163,52 @@ export default {
     font-variant: normal;
     font-weight: 700;
     line-height: 20.4px;
-    &:hover{
+    &:hover {
       background: red;
     }
   }
-
-  @media all and (min-width: 768px) and (max-width: 1024px) {
+}
+@media all and (max-width: 1024px) {
+  #form2 {
+    grid-template-columns: 0.5fr repeat(1, 1fr) 0.5fr;
+    grid-template-rows: repeat(4, 50px);
+    grid-row-gap: 5%;
+    .box1 {
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      color: white;
+      text-align: center;
+      font-size: 13pt;
+      padding-top: 1%;
+      //padding-bottom: 1%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .box2 {
+       height: 100%;
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      //margin-top: 3%;
+      //margin-bottom: 3%;
+      //padding: 3%;
+    }
+    .box3 {
+      height: 100%;
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+    .box4 {
+       height: 100%;
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      //margin-top: 3%;
+      //margin-bottom: 3%;
+      //padding: 3%;
+    }
   }
 }
 </style>

@@ -28,7 +28,7 @@ export default {
 #block7 {
   height: 660px;
   background-position: top;
-  background-image: url("../assets/formsegment.png");
+  background-image: url("../assets/block7/block7_background.webp");
   display: grid;
   grid-template-columns: auto minmax(auto, 900px) auto;
 }
@@ -59,7 +59,7 @@ export default {
       color: white;
     }
   }
-  @media all and (min-width: 480px) and (max-width: 768px) {
+  @media all and (max-width: 768px) {
     //grid-template-columns: auto minmax(auto, 900px) auto;
     //grid-template-rows: repeat(2, 330px);
   }

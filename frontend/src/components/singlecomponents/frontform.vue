@@ -127,7 +127,7 @@ export default {
     //overflow: hidden;
   }
   .form-input {
-    //width: 100%;
+    width: 100%;
     padding: 2%;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -171,19 +171,17 @@ export default {
     font-weight: 700;
     line-height: 20.4px;
   }
-
-  @media all and (min-width: 768px) and (max-width: 1024px) {
+}
+  @media all and (min-width:768px) and (max-width: 1024px) {
     .form-block {
-      position: relative;
-      width: 500px;
-      height: 420px;
-      //padding-bottom: 30%;
-      border-radius: 17px;
-      background: linear-gradient(to top, #e0dfdb, #f9dd0a);
-      &:hover {
-        background: linear-gradient(to top, #e7b219, #f9dd0a);
-      }
+      width: 700px;
+      height: 650px;
     }
-  }
+}
+@media all and (max-width: 768px){
+ .form-block {
+      width: 450px;
+      height: 480px;
+    }
 }
 </style>
